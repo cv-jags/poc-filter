@@ -18,7 +18,7 @@ To start the server, use following command from the project path:
 $ mvn spring-boot:run
 ```
 
-The server will be ready in http://localhost/media
+The filter service will be available in http://localhost:8080/media
 
 ### Technologies Reference List
 

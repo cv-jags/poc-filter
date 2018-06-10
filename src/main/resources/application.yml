@@ -9,7 +9,7 @@ app:
         version: @java.version@
     
 server:
-    port: 80
+    port: 8080
     compression:
         enabled: true
         mime-types: application/json
