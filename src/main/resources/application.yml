@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: Filter Media Service (@project.artifactId@)
+    main:
+        banner-mode: "off"
+app:
+    encoding: @project.encoding@
+    java:
+        version: @java.version@
+    
+server:
+    port: 80
+    compression:
+        enabled: true
+        mime-types: application/json
+
+data:
+    base_uri: https://de8a7d97-b45e-401b-b30e-39ae7b922405.mock.pstmn.io
+    path_uri: /api/v1.0/mediaCatalog/titles/movies
+    

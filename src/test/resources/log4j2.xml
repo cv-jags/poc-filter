@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="CON" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%p] [%-c{1}] - %m %rEx{full}%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="warn">
+			<AppenderRef ref="CON" />
+		</Root>
+	</Loggers>
+</Configuration>
