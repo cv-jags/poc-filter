@@ -8,6 +8,10 @@ import java.util.Map;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +20,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- *
+ * 
  * @author <cv.jags@gmail.com>
  *
  */
@@ -58,7 +62,11 @@ public class FeedEntry {
 	private Object tvSeasonNumber;
 	private int year;
 	private List<Media> media;
+	@XmlElement(required = false, nillable = false)
+	@JsonInclude(Include.NON_NULL)
 	private String peg$ExclusiveFrench;
+	@XmlElement(required = false, nillable = false)
+	@JsonInclude(Include.NON_NULL)
 	private String peg$ISOcountryOfOrigin;
 	private int peg$arAgeRating;
 	private String peg$arContentRating;
@@ -83,5 +91,7 @@ public class FeedEntry {
 	private String peg$priorityLevelThriller;
 	private String peg$productCode;
 	private String peg$programMediaAvailability;
+	@XmlElement(required = false, nillable = false)
+	@JsonInclude(Include.NON_NULL)
 	private String peg$testDefaultValue;
 }
